@@ -9,16 +9,31 @@
 # for i in range(5):
 #     x=i*10
 #     print(x)
-from urllib.request import urlopen
-with urlopen('http://sixty-north.com/c/t.txt') as story:
-	story_words=[]
-	for line in story:
-		line_words=line.split()
-		for word in line_words:
-			story_words.append(word)
+"""from web with bytes"""
+# from urllib.request import urlopen
+# with urlopen('http://sixty-north.com/c/t.txt') as story:
+# 	story_words=[]
+# 	for line in story:
+# 		line_words=line.split()
+# 		for word in line_words:
+# 			story_words.append(word)
+# print(story_words)
+""""decoding bytecode to string"""
+# 
+# def even_or_odd(n):
+#     if n%2==0:
+#         print("even number")
+#         return
+#     print("odd number")
+
+# even_or_odd(2)
+# w=even_or_odd(3)
+# print(w)
 
 
-print(story_words)
+
+
+
 
             
 
