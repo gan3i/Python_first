@@ -94,13 +94,100 @@
 
 """LISTS"""
 
-s="How You doing, How about talking over a dinner".split()
-print(s)
-print(s[-1])#negative indexing negative indexing is -1 based 
-print(s[1:3])#sliciinig(stop not included)
-print(s[1:-1])
-print(s[:3])
-print(s[3:])
+# s="How You doing, How about talking over a dinner".split()
+# print(s)
+# print(s[-1])#negative indexing negative indexing is -1 based 
+# print(s[1:3])#sliciinig(stop not included)
+# print(s[1:-1])#all the elements expect first and last
+# print(s[:3])#slices from the start till 3rd element (stop not included)
+# print(s[3:])
+# x=s[:]# this copies the list (x refers to a new object now but values are same)
+# x=s.copy# this copies the list (x refers to a new object now but values are same)
+# x=list(x) 
+# ## all this performs a shallow copy PFA screenshots
+# c=[3,2]
+# d=c*4
+# x=[0]*8 #repetitions repeat the ref will not copy the value PFA the screen shots
+
+# i=s.index('You')# returns the index is not found -value error
+# count=s.count("you")
+# "you" in s# testing for member ship returns true or false
+# "hey" not in s #tetsing  none membership returns true or false
+# del s[2]# deleted the 2nd element
+# s.remove("You")# removes "you" from the list"
+# del s[s.index("You")]
+# s.insert(2,"hey")
+# z="".join(s)# joins the string
+# s.extend("bug","me")
+# s.reverse()
+# s.sort()
+# s.sort(reverse=True)#desceding sort(sort returns a new list)
+# s.sort(key=len)# sort acco to length ascv
+# v=reversed(s)# reversed returns an iterator
+
+
+""" DICTIONARY"""
+# #Keys must be immutable and values can be mutable  ,items are not stored in any perticular order, dicts are iterable
+# names_and_ages=[("Alice",32),("Bob",48),("Charlie",28)]
+# d=dict(names_and_ages)
+# x=dict(a="alfa",b="beta")
+# print(d)
+# print(x)
+# #copy
+# z=d.copy()
+# c=dict(z)
+# c.update(d)#adds content of d to c if the key values are already pressent then corresponding value will be updated.
+
+# for key in names_and_ages:# we can also iterate thro dict using values.
+#     print("{key)=>{value}".format(key=key,value=names_and_ages[key]))
+
+
+# for key ,value in names_and_ages.items():
+#     print("{key}")
+
+# #membership operaters in annd not in only work on keys 
+
+#del d["Alice"]
+# 
+# from pprint import pprint as pp
+# m={"H":[1,2,3]
+#     ,"He":[3,4]
+#     ,"Be":[7.9,10]}
+    
+# m["H"]+=[4,5,6,7]
+
+# m["N"]=[2,2,2]
+# #print(m)
+# pp(m)
+#d={}# empty dictionary
+
+"""SET"""
+# #mutable collection of unordered elements . sets are iterable, and membership operaters works on set
+# p={6,3,55,34,3,8,23232}
+# print(p)
+# print(type(p))
+# e=set()#empty set
+# s=set([2,3,3,4,2,234,43,8])#from list- duplicates are discarded
+# #s.add(233)
+# p.update([23,23,23,2,2,2,2])
+# print(p)
+# p.remove(2)#error if the element is not pressent in the set
+# p.discard(233)#no effect is the item is not pressent in the list
+# d=p.copy()#shallow copy
+
+# blue_eyes={"Olivia","Harry","Lily","Jack","Amelia"}
+# blond_hair={"Harry","Jack","Mia"}
+# o_blood={"Harry","Lily"}
+# b_blod={"Lola","Amelia","Joshua","Olivia"}
+
+# print(blue_eyes.union(blond_hair))
+# print(blond_hair.intersection(blond_hair))
+# print(blond_hair.difference(b_blod))#none commutative
+# print(b_blod.symmetric_difference(blond_hair))#everything but not in both
+# blond_hair.issubset(blue_eyes)
+# blond_hair.issubset(b_blod)
+# b_blod.isdisjoint(blue_eyes)
+
 
 
 
