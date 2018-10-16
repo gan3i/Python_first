@@ -30,6 +30,15 @@
 # w=even_or_odd(3)
 # print(w)
 
+"""Palindrome"""
+
+def IsPalindrome(s):
+    print(s[1:2:2])
+    #return s==s[::-1]
+    
+
+print(IsPalindrome("Hey"))
+print(IsPalindrome("Mazam"))
 
 
 
