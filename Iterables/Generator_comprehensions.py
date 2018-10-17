@@ -40,4 +40,4 @@ for sun,mon in zip(sunday,monday):# zip can accept any number of iterable object
 from itertools import chain
 
 tempe=chain(sunday,monday)# this is temp chain
-print(tempe)
+print(all(t>0 for t in tempe))
