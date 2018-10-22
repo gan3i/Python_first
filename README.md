@@ -1,2 +1,2 @@
-# Python_first
-this project is to practice python
+# Python Fundamentals
+this project has the practice code for the course "Python fundamentals" taught on Pluralsight
