@@ -1,5 +1,5 @@
 import sys
-from itertools import count, isslice
+from itertools import count, islice
 
 def sequence():
     """Generate Recaman's sequence."""
@@ -15,13 +15,16 @@ def sequence():
 
 def write_sequence(filename,num):
     """ Write Recaman's sequence to a text file. """
-    f=open(filename, mode="wt", encoding="UTF-8")
-    f.writelines("{0}\n".format(r)
-                for r in isslice(sequence(),num+1))
-    f.close()
+    # f=open(filename, mode="wt", encoding="UTF-8")
+    # f.writelines("{0}\n".format(r)
+    #             for r in islice(sequence(),num+1))
+    # f.close()
+
+    with open("wasteland.txt",mode="wt", encoding="UTF-8") as f:
+        f.writelines("{0}\n".format(r) for r in islice(sequence(),num+1))
 
 if __name__=="__main__":
     # write_sequence(filename=sys.argv[1]
     #                 ,num=int(sys.argv[2]))
-    write_sequence(filename=sys.argv[1]
-                    ,num=int(sys.argv[2]))
+    write_sequence("wasteland.txt",
+                    1000)

@@ -2,18 +2,28 @@
 
 
 import sys
+from pprint import pprint 
 def read_series(filename):
-    f=open(filename,mode="rt",encoding="UTF-8")
-    series=[]
-    for line in f:
-        a=int(line.split())
-        series.append(a)
-    f.close()
-    return series
+    # try:
+    #     f=open(filename,mode="rt",encoding="UTF-8")
+    #     return[int(line.strip()) for line in f]
+    #     # series=[]
+    #     # for line in f:
+    #     #     a=int(line.strip())
+    #     #     series.append(a)
+    #     # return series
+    # finally:
+    #     f.close()
+
+    with open(filename,mode="rt",encoding="UTF-8") as f:
+        return[int(line.strip()) for line in f]
+
+    
 
 def main(filename):
     series=read_series(filename)
-    print(series)
+    pprint(series)
 
 if __name__=="__main__":
-    main(sys.argv[1])
+    # main(sys.argv[1])
+    main("wasteland.txt")
